@@ -1,0 +1,27 @@
+{
+  "name": "basic-rest-api",
+  "version": "1.0.0",
+  "description": "Build A REST API With Node.js, Express, & MongoDB - Quick",
+  "main": "index.js",
+  "scripts": {
+    "devMode" : "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sumrender/basic-rest-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sumrender/basic-rest-api/issues"
+  },
+  "homepage": "https://github.com/Sumrender/basic-rest-api#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.7"
+  },
+  "devDependencies": {
+    "dotenv": "^14.2.0"
+  }
+}
