@@ -17,6 +17,7 @@ router.get('/:id',getSubscriber, (req, res) => {
   res.send(res.subscriber);
 });
 
+// Create
 router.post('/', async (req, res) => {
   const subscriber = new Subscriber({
     name: req.body.name,
@@ -31,6 +32,7 @@ router.post('/', async (req, res) => {
 
 });
 
+// Update
 router.patch('/:id',getSubscriber, async (req, res) => {
   if(req.body.name != null) {
     res.subscriber.name = req.body.name;
@@ -46,6 +48,7 @@ router.patch('/:id',getSubscriber, async (req, res) => {
   }
 });
 
+// Remove
 router.delete('/:id',getSubscriber ,async (req, res) => {
   try {
     await res.subscriber.remove();
@@ -56,6 +59,7 @@ router.delete('/:id',getSubscriber ,async (req, res) => {
   }
 });
 
+// Helper function
 async function getSubscriber(req, res, next) {
   let subscriber
   try {
@@ -70,4 +74,5 @@ async function getSubscriber(req, res, next) {
   next()
 }
 
+// Export statement
 module.exports = router
